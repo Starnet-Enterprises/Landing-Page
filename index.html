@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starnet - Connecting the Future</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f7fafc;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      background: linear-gradient(to right, rgba(187, 48, 169, 0.7), rgba(187, 48, 169, 0.7));
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      animation: fadeIn 2s;
+    }
+
+    .cta-button {
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #ffcc00;
+      transform: scale(1.05);
+    }
+
+    .about,
+    .services,
+    .contact {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(237, 237, 237, 0.8)); /* Gradient background */
+      animation: slideIn 1s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .hero h2 {
+      animation: zoomIn 1s ease;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .hover-effect:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: 70vh;
+      }
+
+      .hero h2 {
+        font-size: 2.5rem;
+      }
+
+      .cta-button {
+        padding: 12px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<header class="bg-white shadow-md">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-3xl font-bold text-gray-800">Starnet</h1>
+    <nav>
+      <ul class="flex space-x-6">
+        <li><a href="#about" class="text-gray-800 hover:text-purple-600 transition">About Us</a></li>
+        <li><a href="#services" class="text-gray-800 hover:text-purple-600 transition">Services</a></li>
+        <li><a href="#contact" class="text-gray-800 hover:text-purple-600 transition">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero text-white text-center">
+    <h2 class="text-4xl font-bold mb-4">Connecting the Future</h2>
+    <p class="text-lg mb-6">Your gateway to advanced IT solutions, including Software Development, IT Infrastructure, and Custom IT Services tailored to meet your business needs.</p>
+    <a href="#contact" class="cta-button bg-purple-700 text-gray-800 px-6 py-2 rounded-lg shadow-lg hover:shadow-xl">Get Started</a>
+  </section>
+
+  <section id="about" class="about py-20 text-gray-800 text-center fade-in">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-4">About Us</h2>
+      <p class="text-lg mb-4">At Starnet, we are committed to delivering innovative IT solutions that empower businesses to thrive in the digital age. Our team of experts is dedicated to providing high-quality services tailored to your specific needs.</p>
+      <p class="text-lg mb-4">With a focus on excellence and customer satisfaction, we aim to be your trusted partner in navigating the complexities of modern technology.</p>
+    </div>
+  </section>
+
+  <section id="services" class="services py-20 text-center fade-in">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Our Services</h2>
+      <ul class="space-y-4 text-gray-700 mb-6">
+        <li class="text-lg hover-effect">🔹 Software Development</li>
+        <li class="text-lg hover-effect">🔹 IT Infrastructure</li>
+        <li class="text-lg hover-effect">🔹 Custom IT Services</li>
+        <li class="text-lg hover-effect">🔹 Customer Support</li>
+      </ul>
+      <p class="mt-4 text-lg">Each service is designed to ensure your business runs smoothly and efficiently, leveraging the latest technologies to give you a competitive edge.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact py-20 text-gray-800 text-center fade-in">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+      <p>If you have any questions or would like to learn more about our services, feel free to reach out!</p>
+      <p class="mt-2">Email: <a href="mailto:info@starnet.systems" class="text-purple-600">info@starnet.com</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-gray-800 text-white py-4">
+  <div class="container mx-auto text-center">
+    <p>&copy; 2024 Starnet. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+
+</html>
