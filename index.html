@@ -13,7 +13,7 @@
     }
 
     .hero {
-      background: linear-gradient(to right, rgba(187, 48, 169, 0.7), rgba(187, 48, 169, 0.7));
+      background: linear-gradient(to right, rgba(102, 16, 90, 0.8), rgba(102, 16, 90, 0.8)), url('media/backround.jpg');
       background-size: cover;
       background-position: center;
       height: 100vh;
@@ -36,7 +36,7 @@
     .about,
     .services,
     .contact {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(237, 237, 237, 0.8)); /* Gradient background */
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(237, 237, 237, 0.8));
       animation: slideIn 1s;
     }
 
@@ -44,6 +44,7 @@
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
@@ -54,6 +55,7 @@
         transform: translateY(30px);
         opacity: 0;
       }
+
       to {
         transform: translateY(0);
         opacity: 1;
@@ -69,6 +71,7 @@
         transform: scale(0.8);
         opacity: 0;
       }
+
       to {
         transform: scale(1);
         opacity: 1;
@@ -84,6 +87,78 @@
       transition: transform 0.3s ease;
     }
 
+    /* About Section */
+    .about .content-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .about img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .about-text {
+      max-width: 45%;
+    }
+
+    .about-text h2 {
+      color: #66105A;
+    }
+
+    .about-text p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .about-text button {
+      background-color: #66105A;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .about-text button:hover {
+      background-color: #ffcc00;
+      color: #66105A;
+    }
+
+    /* Services Section */
+    .services {
+      background-color: #f3f4f6;
+    }
+
+    .service-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-card i {
+      font-size: 2.5rem;
+      color: #66105A;
+    }
+
+    .service-card h3 {
+      margin-top: 10px;
+      color: #66105A;
+      font-weight: bold;
+    }
+
+    .service-card p {
+      margin-top: 5px;
+      color: #4a5568;
+    }
+
     @media (max-width: 768px) {
       .hero {
         height: 70vh;
@@ -96,67 +171,99 @@
       .cta-button {
         padding: 12px 24px;
       }
+
+      .about .content-wrapper {
+        flex-direction: column;
+      }
+
+      .about-text {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 
 <body>
-<header class="bg-white shadow-md">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-3xl font-bold text-gray-800">Starnet</h1>
-    <nav>
-      <ul class="flex space-x-6">
-        <li><a href="#about" class="text-gray-800 hover:text-purple-600 transition">About Us</a></li>
-        <li><a href="#services" class="text-gray-800 hover:text-purple-600 transition">Services</a></li>
-        <li><a href="#contact" class="text-gray-800 hover:text-purple-600 transition">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="hero text-white text-center">
-    <h2 class="text-4xl font-bold mb-4">Connecting the Future</h2>
-    <p class="text-lg mb-6">Your gateway to advanced IT solutions, including Software Development, IT Infrastructure, and Custom IT Services tailored to meet your business needs.</p>
-    <a href="#contact" class="cta-button bg-purple-700 text-gray-800 px-6 py-2 rounded-lg shadow-lg hover:shadow-xl">Get Started</a>
-  </section>
-
-  <section id="about" class="about py-20 text-gray-800 text-center fade-in">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-4">About Us</h2>
-      <p class="text-lg mb-4">At Starnet, we are committed to delivering innovative IT solutions that empower businesses to thrive in the digital age. Our team of experts is dedicated to providing high-quality services tailored to your specific needs.</p>
-      <p class="text-lg mb-4">With a focus on excellence and customer satisfaction, we aim to be your trusted partner in navigating the complexities of modern technology.</p>
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-3xl font-bold text-gray-800">Starnet</h1>
+      <nav class="bg-purple-700 px-6 py-2 rounded-lg">
+        <ul class="flex space-x-6">
+          <li><a href="#about" class="text-white hover:text-yellow-400 transition">About Us</a></li>
+          <li><a href="#services" class="text-white hover:text-yellow-400 transition">Services</a></li>
+          <li><a href="#contact" class="text-white hover:text-yellow-400 transition">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <section id="services" class="services py-20 text-center fade-in">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-4 text-gray-800">Our Services</h2>
-      <ul class="space-y-4 text-gray-700 mb-6">
-        <li class="text-lg hover-effect">🔹 Software Development</li>
-        <li class="text-lg hover-effect">🔹 IT Infrastructure</li>
-        <li class="text-lg hover-effect">🔹 Custom IT Services</li>
-        <li class="text-lg hover-effect">🔹 Customer Support</li>
-      </ul>
-      <p class="mt-4 text-lg">Each service is designed to ensure your business runs smoothly and efficiently, leveraging the latest technologies to give you a competitive edge.</p>
+  <main>
+    <section class="hero text-white text-center">
+      <h2 class="text-4xl font-bold mb-4">Connecting the Future</h2>
+      <p class="text-lg mb-6">Your gateway to advanced IT solutions, including Software Development, IT Infrastructure, and Custom IT Services tailored to meet your business needs.</p>
+      <a href="#contact" class="cta-button bg-purple-700 text-gray-800 px-6 py-2 rounded-lg shadow-lg hover:shadow-xl">Get Started</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about py-20 text-gray-800 fade-in">
+      <div class="container mx-auto px-6">
+        <div class="content-wrapper">
+          <div class="about-text">
+            <h2 class="text-3xl font-bold mb-4">About Us</h2>
+            <p>At Starnet, we are committed to delivering innovative IT solutions that empower businesses to thrive in the digital age. Our team of experts is dedicated to providing high-quality services tailored to your specific needs.</p>
+            <p>With a focus on excellence and customer satisfaction, we aim to be your trusted partner in navigating the complexities of modern technology.</p>
+            <button>Learn More</button>
+          </div>
+          <div class="about-image">
+            <img src="media/logo.jpg" alt="About Us Image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services py-20 text-center fade-in">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-4 text-gray-800">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="service-card">
+            <i class="fas fa-code"></i>
+            <h3>Software Development</h3>
+            <p>Custom software solutions to help your business grow.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-network-wired"></i>
+            <h3>IT Infrastructure</h3>
+            <p>Robust infrastructure solutions for your enterprise.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-cogs"></i>
+            <h3>Custom IT Services</h3>
+            <p>Tailored IT services designed to meet your needs.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-headset"></i>
+            <h3>Customer Support</h3>
+            <p>Reliable support for all your technical needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact py-20 text-gray-800 text-center fade-in">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+        <p>If you have any questions or would like to learn more about our services, feel free to reach out!</p>
+        <p class="mt-2">Email: <a href="mailto:info@starnet.systems" class="text-purple-600">info@starnet.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Starnet. All rights reserved.</p>
     </div>
-  </section>
-
-  <section id="contact" class="contact py-20 text-gray-800 text-center fade-in">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-      <p>If you have any questions or would like to learn more about our services, feel free to reach out!</p>
-      <p class="mt-2">Email: <a href="mailto:info@starnet.systems" class="text-purple-600">info@starnet.com</a></p>
-    </div>
-  </section>
-</main>
-
-<footer class="bg-gray-800 text-white py-4">
-  <div class="container mx-auto text-center">
-    <p>&copy; 2024 Starnet. All rights reserved.</p>
-  </div>
-</footer>
-
+  </footer>
 </body>
 
 </html>
